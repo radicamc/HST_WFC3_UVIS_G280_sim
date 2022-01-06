@@ -94,7 +94,7 @@ def UVIS_simulation(data_folder, file_name, exposure_time, orbits_in_transit, no
 	# UVIS spectral bins for simulation
 	# Note Wakeford et al. (2020, AJ) used bins of 100 angstrom by
 	# combining two transits of the hot Jupiter HAT-P-41b
-	nbins = (endw - startw) / binlen
+	nbins = (endw - startw) // binlen
 	wav_topbot = np.linspace(startw, endw, nbins)
 	wav_bot = wav_topbot[:-1]
 	wav_top = wav_topbot[1:]
